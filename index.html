@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1479ff">
+  <title>ÁguaPro PDV</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand">
+        <div class="brand-mark">A</div>
+        <div><strong>ÁguaPro</strong><span>Gestão & PDV</span></div>
+      </div>
+      <nav id="mainNav">
+        <button class="nav-item active" data-page="vendas"><span data-icon="cart"></span><span>Vendas</span></button>
+        <button class="nav-item" data-page="produtos"><span data-icon="box"></span><span>Produtos</span></button>
+        <button class="nav-item" data-page="estoque"><span data-icon="layers"></span><span>Estoque</span><b class="nav-badge" id="stockBadge">0</b></button>
+        <button class="nav-item" data-page="cancelamentos"><span data-icon="cancel"></span><span>Cancelamentos</span></button>
+        <button class="nav-item" data-page="relatorios"><span data-icon="chart"></span><span>Relatórios</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="operator-card">
+          <div class="avatar">MS</div>
+          <div><strong>Marcos Silva</strong><span>Administrador</span></div>
+          <button class="icon-btn" title="Opções">•••</button>
+        </div>
+        <div class="system-state"><i></i><span>Sistema operacional</span><b>v1.0</b></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-title"><button class="menu-btn" id="menuBtn" aria-label="Abrir menu">☰</button><div><h1 id="pageTitle">Nova venda</h1><p id="pageSubtitle">Selecione os produtos e finalize o atendimento</p></div></div>
+        <div class="topbar-actions">
+          <div class="cash-pill" id="cashPill"><span class="status-dot"></span><div><small>Caixa</small><strong>Fechado</strong></div></div>
+          <span class="date-chip" id="todayLabel"></span>
+          <button class="icon-btn notification" title="Notificações"><span data-icon="bell"></span><i></i></button>
+        </div>
+      </header>
+
+      <section class="page active" id="page-vendas">
+        <div class="sales-layout">
+          <div class="catalog-panel">
+            <div class="toolbar">
+              <label class="search-box"><span data-icon="search"></span><input id="saleSearch" placeholder="Buscar produto ou código..." autocomplete="off"><kbd>F2</kbd></label>
+              <button class="btn secondary" id="scanBtn"><span data-icon="scan"></span> Código</button>
+            </div>
+            <div class="category-chips" id="saleCategories"></div>
+            <div class="product-grid" id="productGrid"></div>
+          </div>
+          <aside class="cart-panel">
+            <div class="cart-head"><div><h2>Venda atual</h2><p id="saleNumber">Atendimento #0001</p></div><button class="text-btn danger" id="clearCart">Limpar</button></div>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-footer">
+              <div class="discount-line"><span>Desconto manual</span><label><span>R$</span><input id="manualDiscount" type="number" min="0" step="0.01" value="0.00"></label></div>
+              <div class="totals"><div><span>Subtotal</span><strong id="subtotal">R$ 0,00</strong></div><div class="discount-total"><span>Descontos</span><strong id="discountTotal">- R$ 0,00</strong></div><div class="grand-total"><span>Total</span><strong id="grandTotal">R$ 0,00</strong></div></div>
+              <button class="btn primary checkout-btn" id="checkoutBtn"><span>Finalizar venda</span><strong>F4</strong></button>
+              <p class="shortcut-hint"><span data-icon="keyboard"></span> Use F2 para buscar e F4 para finalizar</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-produtos">
+        <div class="content-wrap">
+          <div class="section-actions"><div class="segmented" id="productTabs"><button class="active" data-tab="products">Produtos</button><button data-tab="categories">Categorias</button><button data-tab="suppliers">Fornecedores</button></div><button class="btn primary" id="addProductBtn"><span data-icon="plus"></span>Novo produto</button></div>
+          <div class="data-card">
+            <div class="table-toolbar"><label class="search-box"><span data-icon="search"></span><input id="productSearch" placeholder="Buscar no catálogo..."></label><select id="productCategoryFilter"><option value="">Todas as categorias</option></select></div>
+            <div class="table-scroll"><table><thead id="productTableHead"></thead><tbody id="productTableBody"></tbody></table></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-estoque">
+        <div class="content-wrap">
+          <div class="kpi-grid" id="stockKpis"></div>
+          <div class="section-actions"><div><h2>Posição de estoque</h2><p>Saldo atual e movimentações dos produtos</p></div><button class="btn primary" id="stockEntryBtn"><span data-icon="plus"></span>Nova movimentação</button></div>
+          <div class="data-card">
+            <div class="table-toolbar"><label class="search-box"><span data-icon="search"></span><input id="stockSearch" placeholder="Buscar produto..."></label><select id="stockStatusFilter"><option value="">Todos os status</option><option value="low">Estoque baixo</option><option value="ok">Estoque normal</option></select></div>
+            <div class="table-scroll"><table><thead><tr><th>Produto</th><th>Categoria</th><th>Estoque atual</th><th>Estoque mínimo</th><th>Status</th><th>Última movimentação</th><th></th></tr></thead><tbody id="stockTableBody"></tbody></table></div>
+          </div>
+          <div class="data-card movement-card"><div class="card-heading"><div><h3>Movimentações recentes</h3><p>Histórico imutável de entradas e saídas</p></div></div><div class="table-scroll"><table><thead><tr><th>Data</th><th>Produto</th><th>Tipo</th><th>Quantidade</th><th>Motivo</th><th>Responsável</th></tr></thead><tbody id="movementTableBody"></tbody></table></div></div>
+        </div>
+      </section>
+
+      <section class="page" id="page-cancelamentos">
+        <div class="content-wrap">
+          <div class="notice-card"><div class="notice-icon"><span data-icon="shield"></span></div><div><strong>Histórico protegido</strong><p>Vendas canceladas nunca são apagadas. O motivo, responsável, estoque e caixa ficam registrados para auditoria.</p></div></div>
+          <div class="section-actions"><div><h2>Vendas e cancelamentos</h2><p>Localize uma venda confirmada para efetuar o estorno</p></div></div>
+          <div class="data-card">
+            <div class="table-toolbar"><label class="search-box"><span data-icon="search"></span><input id="cancelSearch" placeholder="Buscar por número ou forma de pagamento..."></label><select id="cancelStatusFilter"><option value="">Todos os status</option><option value="completed">Concluídas</option><option value="cancelled">Canceladas</option></select></div>
+            <div class="table-scroll"><table><thead><tr><th>Venda</th><th>Data e hora</th><th>Itens</th><th>Pagamento</th><th>Valor</th><th>Status</th><th></th></tr></thead><tbody id="cancelTableBody"></tbody></table></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page" id="page-relatorios">
+        <div class="content-wrap">
+          <div class="report-bar"><div class="period-tabs" id="reportPeriod"><button class="active" data-period="day">Hoje</button><button data-period="week">Esta semana</button><button data-period="month">Este mês</button><button data-period="year">Este ano</button><button data-period="all">Todo período</button></div><button class="btn secondary" id="exportCsv"><span data-icon="download"></span>Baixar CSV</button></div>
+          <div class="kpi-grid report-kpis" id="reportKpis"></div>
+          <div class="report-grid">
+            <div class="data-card chart-card"><div class="card-heading"><div><h3>Desempenho de vendas</h3><p id="chartCaption">Faturamento por período</p></div><div class="legend"><i></i> Faturamento</div></div><div class="bar-chart" id="salesChart"></div></div>
+            <div class="data-card ranking-card"><div class="card-heading"><div><h3>Produtos mais vendidos</h3><p>Por quantidade de itens</p></div></div><div id="productRanking"></div></div>
+          </div>
+          <div class="data-card"><div class="card-heading"><div><h3>Resumo das vendas</h3><p>Valores consolidados do período selecionado</p></div></div><div class="table-scroll"><table><thead><tr><th>Venda</th><th>Data</th><th>Itens</th><th>Pagamento</th><th>Faturamento</th><th>Custo</th><th>Lucro estimado</th><th>Status</th></tr></thead><tbody id="reportTableBody"></tbody></table></div></div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" id="modal"></div></div>
+  <div class="toast-stack" id="toastStack"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>

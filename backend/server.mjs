@@ -1,5 +1,5 @@
 import { createServer } from "node:http";
-import { readFile, stat } from "node:fs/promises";
+import { readFile, stat, watch } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -7,9 +7,34 @@ import { fileURLToPath } from "node:url";
 const root = fileURLToPath(new URL("../", import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const types = { ".html":"text/html; charset=utf-8", ".css":"text/css; charset=utf-8", ".js":"text/javascript; charset=utf-8", ".json":"application/json; charset=utf-8", ".svg":"image/svg+xml" };
+const liveClients = new Set();
+let liveStarted = false;
+
+async function watchChanges() {
+  try {
+    const watcher = watch(root, { recursive: true });
+    for await (const event of watcher) {
+      if (!event.filename || /(^|[\\/])(?:\.git|node_modules)(?:[\\/]|$)/i.test(event.filename)) continue;
+      for (const client of liveClients) client.write("data: reload\n\n");
+    }
+  } catch (error) {
+    console.warn("Live reload indisponível:", error.message);
+  }
+}
 
 createServer(async (req, res) => {
   try {
+    if (!liveStarted) {
+      liveStarted = true;
+      watchChanges();
+    }
+    if (new URL(req.url, "http://" + req.headers.host).pathname === "/__live-reload") {
+      res.writeHead(200, {"Content-Type":"text/event-stream; charset=utf-8","Cache-Control":"no-cache","Connection":"keep-alive","Access-Control-Allow-Origin":"*"});
+      res.write(": conectado\n\n");
+      liveClients.add(res);
+      req.on("close", () => liveClients.delete(res));
+      return;
+    }
     const urlPath = decodeURIComponent(new URL(req.url, `http://${req.headers.host}`).pathname);
     const relative = normalize(urlPath === "/" ? "index.html" : urlPath.slice(1));
     if (relative.startsWith("..")) throw new Error("invalid path");

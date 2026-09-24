@@ -11,6 +11,7 @@ const icons = {
   layers:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 2 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg>',
   cancel:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="m9 9 6 6m0-6-6 6"/></svg>',
   chart:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10m6 10V4m6 16v-7m5 7H2"/></svg>',
+  settings:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"/><path d="m19.4 15 .1.1a1.8 1.8 0 0 1-2.5 2.5l-.1-.1a1.8 1.8 0 0 0-3.1 1.3v.2a1.8 1.8 0 0 1-3.6 0v-.2a1.8 1.8 0 0 0-3.1-1.3l-.1.1a1.8 1.8 0 0 1-2.5-2.5l.1-.1a1.8 1.8 0 0 0-1.3-3.1h-.2a1.8 1.8 0 0 1 0-3.6h.2a1.8 1.8 0 0 0 1.3-3.1l-.1-.1a1.8 1.8 0 0 1 2.5-2.5l.1.1a1.8 1.8 0 0 0 3.1-1.3v-.2a1.8 1.8 0 0 1 3.6 0v.2a1.8 1.8 0 0 0 3.1 1.3l.1-.1a1.8 1.8 0 0 1 2.5 2.5l-.1.1a1.8 1.8 0 0 0 1.3 3.1h.2a1.8 1.8 0 0 1 0 3.6h-.2a1.8 1.8 0 0 0-1.3 3.1Z"/></svg>',
   search:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>',
   scan:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7V4h3m10 0h3v3m0 10v3h-3M7 20H4v-3M7 8v8m3-8v8m4-8v8m3-8v8"/></svg>',
   bell:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9ZM10 21h4"/></svg>',
@@ -25,6 +26,15 @@ const icons = {
   trend:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m3 17 6-6 4 4 8-9"/><path d="M15 6h6v6"/></svg>',
   warning:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10.3 3.7 2.2 18a2 2 0 0 0 1.7 3h16.2a2 2 0 0 0 1.7-3L13.7 3.7a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4m0 4h.01"/></svg>',
   tag:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 13 13 20l-9-9V4h7l9 9Z"/><circle cx="8.5" cy="8.5" r="1"/></svg>'
+  ,water:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3S5 10.2 5 15a7 7 0 0 0 14 0c0-4.8-7-12-7-12Z"/><path d="M9 16.5a3.5 3.5 0 0 0 3 2"/></svg>'
+  ,bottle:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 3h4v3l1.5 2.5A4 4 0 0 1 16 10.6V20a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-9.4a4 4 0 0 1 .5-2.1L10 6V3Z"/><path d="M9 8h6M8 13h8"/></svg>'
+  ,drink:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4h12l-1 17H7L6 4Z"/><path d="M8 8h8M10 2h4M14 4l3-2"/></svg>'
+  ,juice:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 14H7L6 7ZM8 3h8l1 4H7l1-4Z"/><path d="m14 3 3-2"/></svg>'
+  ,pump:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 20h12M9 20V8h6v12M12 8V4h6v4M18 4l2-2M8 12h8"/></svg>'
+  ,support:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20h16M6 20V8h12v12M4 8h16M8 4h8v4H8zM9 12h2m2 0h2m-6 4h2m2 0h2"/></svg>'
+  ,package:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 8v9l9 5 9-5V8M12 13v9"/></svg>'
+  ,chartReport:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 20V10m6 10V4m6 16v-7m5 7H2"/></svg>'
+  ,calendar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4M8 2v4M3 9h18"/></svg>'
 };
 
 const nowIso = () => new Date().toISOString();
@@ -38,14 +48,14 @@ function seedState() {
   ];
   const suppliers = [{id:"sup_1",name:"Fonte Cristalina",phone:"(11) 99800-1200"},{id:"sup_2",name:"Distribuidora Central",phone:"(11) 3456-7890"}];
   const products = [
-    {id:"p1",code:"78910001",name:"Galão Água Mineral 20L",categoryId:"cat_water",supplierId:"sup_1",cost:8.5,price:18,stock:38,minStock:12,emoji:"💧",color:0,promo:0,active:true},
-    {id:"p2",code:"78910002",name:"Galão Água Mineral 10L",categoryId:"cat_water",supplierId:"sup_1",cost:5.2,price:12,stock:6,minStock:10,emoji:"💧",color:1,promo:10,active:true},
-    {id:"p3",code:"78910003",name:"Água Mineral 1,5L",categoryId:"cat_bottle",supplierId:"sup_1",cost:2.2,price:4.5,stock:72,minStock:20,emoji:"🧊",color:2,promo:0,active:true},
-    {id:"p4",code:"78910004",name:"Água Mineral 500ml",categoryId:"cat_bottle",supplierId:"sup_1",cost:1.1,price:2.5,stock:96,minStock:30,emoji:"💦",color:0,promo:0,active:true},
-    {id:"p5",code:"78910005",name:"Refrigerante Cola 2L",categoryId:"cat_drink",supplierId:"sup_2",cost:6.9,price:11.9,stock:18,minStock:10,emoji:"🥤",color:4,promo:5,active:true},
-    {id:"p6",code:"78910006",name:"Suco de Laranja 1L",categoryId:"cat_drink",supplierId:"sup_2",cost:5.4,price:9.5,stock:4,minStock:8,emoji:"🍊",color:2,promo:0,active:true},
-    {id:"p7",code:"78910007",name:"Bomba Manual para Galão",categoryId:"cat_access",supplierId:"sup_2",cost:12,price:24.9,stock:14,minStock:5,emoji:"🔵",color:5,promo:0,active:true},
-    {id:"p8",code:"78910008",name:"Suporte para Galão",categoryId:"cat_access",supplierId:"sup_2",cost:18,price:34.9,stock:9,minStock:4,emoji:"⚙️",color:3,promo:0,active:true}
+    {id:"p1",code:"78910001",name:"Galão Água Mineral 20L",categoryId:"cat_water",supplierId:"sup_1",cost:8.5,price:18,stock:38,minStock:12,icon:"water",color:0,promo:0,active:true},
+    {id:"p2",code:"78910002",name:"Galão Água Mineral 10L",categoryId:"cat_water",supplierId:"sup_1",cost:5.2,price:12,stock:6,minStock:10,icon:"water",color:1,promo:10,active:true},
+    {id:"p3",code:"78910003",name:"Água Mineral 1,5L",categoryId:"cat_bottle",supplierId:"sup_1",cost:2.2,price:4.5,stock:72,minStock:20,icon:"bottle",color:2,promo:0,active:true},
+    {id:"p4",code:"78910004",name:"Água Mineral 500ml",categoryId:"cat_bottle",supplierId:"sup_1",cost:1.1,price:2.5,stock:96,minStock:30,icon:"bottle",color:0,promo:0,active:true},
+    {id:"p5",code:"78910005",name:"Refrigerante Cola 2L",categoryId:"cat_drink",supplierId:"sup_2",cost:6.9,price:11.9,stock:18,minStock:10,icon:"drink",color:4,promo:5,active:true},
+    {id:"p6",code:"78910006",name:"Suco de Laranja 1L",categoryId:"cat_drink",supplierId:"sup_2",cost:5.4,price:9.5,stock:4,minStock:8,icon:"juice",color:2,promo:0,active:true},
+    {id:"p7",code:"78910007",name:"Bomba Manual para Galão",categoryId:"cat_access",supplierId:"sup_2",cost:12,price:24.9,stock:14,minStock:5,icon:"pump",color:5,promo:0,active:true},
+    {id:"p8",code:"78910008",name:"Suporte para Galão",categoryId:"cat_access",supplierId:"sup_2",cost:18,price:34.9,stock:9,minStock:4,icon:"support",color:3,promo:0,active:true}
   ];
   const sample = [
     ["p1",2,"Dinheiro",0],["p4",8,"Pix",-1],["p2",2,"Cartão",-2],["p5",3,"Pix",-5],
@@ -56,12 +66,16 @@ function seedState() {
     const p=products.find(x=>x.id===s[0]), unit=p.price*(1-p.promo/100), total=unit*s[1];
     return {id:`sale_${i+1}`,number:1000+i,date:dayOffset(s[3]),status:"completed",payment:s[2],subtotal:p.price*s[1],discount:p.price*s[1]-total,total,cost:p.cost*s[1],items:[{productId:p.id,name:p.name,qty:s[1],price:p.price,cost:p.cost,promo:p.promo}],operator:"Marcos Silva"};
   });
-  return {categories,suppliers,products,sales,cancellations:[],cashSessions:[],stockMovements:[],cart:[],settings:{nextSale:1010}};
+  const sellers = [{id:"seller_marcos",name:"Marcos Silva",phone:"",active:true},{id:"seller_glaucia",name:"Glaucia",phone:"",active:true}];
+  return {categories,suppliers,products,sales,cancellations:[],cashSessions:[],stockMovements:[],cart:[],sellers,settings:{nextSale:1010,storeName:"ÁguaPro Distribuidora",defaultSellerId:"seller_marcos",defaultDiscount:0,autoFocus:true,confirmSale:false}};
 }
 
 let state;
 try { state = JSON.parse(localStorage.getItem(STORAGE_KEY)) || seedState(); } catch { state = seedState(); }
 state.cart = [];
+state.sellers = Array.isArray(state.sellers) && state.sellers.length ? state.sellers : [{id:"seller_marcos",name:"Marcos Silva",phone:"",active:true}];
+state.settings = {...{nextSale:1010,storeName:"ÁguaPro Distribuidora",defaultSellerId:state.sellers[0].id,defaultDiscount:0,autoFocus:true,confirmSale:false},...(state.settings||{})};
+if(!state.sellers.some(s=>s.id===state.settings.defaultSellerId&&s.active!==false)) state.settings.defaultSellerId=state.sellers.find(s=>s.active!==false)?.id||state.sellers[0].id;
 let saleCategory = "";
 let productTab = "products";
 let reportPeriod = "day";
@@ -84,12 +98,12 @@ function toast(message,type="success") { const el=document.createElement("div");
 function openModal(content, wide=false){ const modal=$("#modal"); modal.className=`modal${wide?" wide":""}`; modal.innerHTML=content; $("#modalBackdrop").classList.add("show"); $("#modalBackdrop").setAttribute("aria-hidden","false"); renderIcons(modal); }
 function closeModal(){ $("#modalBackdrop").classList.remove("show"); $("#modalBackdrop").setAttribute("aria-hidden","true"); }
 
-function renderAll(){ renderCash(); renderSale(); renderProducts(); renderStock(); renderCancellations(); renderReports(); renderIcons(); }
+function renderAll(){ renderCash(); renderSale(); renderProducts(); renderStock(); renderCancellations(); renderReports(); renderSettings(); renderIcons(); }
 
 function navigate(page){
   $$(".page").forEach(p=>p.classList.toggle("active",p.id===`page-${page}`));
   $$(".nav-item").forEach(n=>n.classList.toggle("active",n.dataset.page===page));
-  const meta={vendas:["Nova venda","Selecione os produtos e finalize o atendimento"],produtos:["Produtos","Gerencie catálogo, preços e categorias"],estoque:["Controle de estoque","Acompanhe saldos e movimentações"],cancelamentos:["Cancelamentos","Estorne vendas sem perder o histórico"],relatorios:["Relatórios","Indicadores financeiros e desempenho"]}[page];
+  const meta={vendas:["Nova venda","Selecione os produtos e finalize o atendimento"],produtos:["Produtos","Gerencie catálogo, preços e categorias"],estoque:["Controle de estoque","Acompanhe saldos e movimentações"],cancelamentos:["Cancelamentos","Estorne vendas sem perder o histórico"],relatorios:["Relatórios","Indicadores financeiros e desempenho"],configuracoes:["Configurações","Personalize a operação e acompanhe sua equipe"]}[page];
   $("#pageTitle").textContent=meta[0]; $("#pageSubtitle").textContent=meta[1]; $("#sidebar").classList.remove("show");
 }
 
@@ -98,7 +112,18 @@ function renderCash(){
   pill.querySelector("strong").textContent=cash?`Aberto · ${money.format(cash.openingAmount)}`:"Fechado";
 }
 
-function productVisual(p){ return p.image ? `<img class="product-image" src="${esc(p.image)}" alt="${esc(p.name)}">` : `<span>${p.emoji||"📦"}</span>`; }
+function productIconKey(p){
+  if(p.icon&&icons[p.icon])return p.icon;
+  const name=(p.name||"").toLowerCase();
+  if(name.includes("bomba"))return "pump";
+  if(name.includes("suporte"))return "support";
+  if(name.includes("suco"))return "juice";
+  if(name.includes("refrigerante"))return "drink";
+  if(name.includes("água")&&name.includes("galão"))return "water";
+  if(name.includes("água"))return "bottle";
+  return "package";
+}
+function productVisual(p){ return p.image ? "<img class=\"product-image\" src=\""+esc(p.image)+"\" alt=\""+esc(p.name)+"\">" : "<span class=\"product-icon\">"+(icons[productIconKey(p)]||icons.package)+"</span>"; }
 function productColor(p){ return `color-${(p.color||0)%palette.length}`; }
 
 function renderSale(){
@@ -128,6 +153,7 @@ function addToCart(id){ const p=state.products.find(x=>x.id===id), item=state.ca
 function showCheckout(){
   if(!state.cart.length){toast("Adicione pelo menos um produto.","error");return}
   if(!currentCash()){showCashModal();return}
+  if(Number($("#manualDiscount")?.value||0)===0&&Number(state.settings.defaultDiscount||0)>0){$("#manualDiscount").value=Number(state.settings.defaultDiscount).toFixed(2);renderCart();}
   const totals=getCartTotals(); selectedPayment="Dinheiro"; paymentDetails={brand:"Visa",type:"Crédito",installments:1};
   const fmtMoney = n => money.format(Number(n||0));
   const fmtNum = n => Number(n||0).toFixed(2);
@@ -195,9 +221,7 @@ function showCheckout(){
           </div>
           <span class="context-title">Vendedor</span>
           <select class="context-select" id="checkoutSeller">
-            <option value="Marcos Silva">Marcos Silva</option>
-            <option value="Glaucia">Glaucia</option>
-            <option value="Operador do Caixa">Operador do Caixa</option>
+            \${state.sellers.filter(s=>s.active!==false).map(s=>\`<option value="\${esc(s.id)}" \${s.id===state.settings.defaultSellerId?"selected":""}>\${esc(s.name)}</option>\`).join("")}
           </select>
         </div>
 
@@ -446,6 +470,7 @@ function getCartTotals(){
 
 function completeSale(){
   const totals=getCartTotals();
+  if(state.settings.confirmSale&&!window.confirm("Confirmar esta venda?"))return;
   const cashPaid=Math.max(0,Number($("#cashAmount")?.value)||0),cardPaid=Math.max(0,Number($("#cardAmount")?.value)||0),termPaid=Math.max(0,Number($("#termAmount")?.value)||0),paidTotal=cashPaid+cardPaid+termPaid;
   if(paidTotal+0.005<totals.total){toast(`Ainda faltam ${money.format(totals.total-paidTotal)} para completar o pagamento.`,"error");return}
   if(selectedPayment==="Dinheiro"&&Number($("#receivedAmount").value)<totals.total){toast("O valor recebido é menor que o total.","error");return}
@@ -456,7 +481,7 @@ function completeSale(){
   else if(termPaid>0) selectedPayment="Prazo";
   const paymentLabel=selectedPayment==="mixed"?`Misto · Dinheiro + Cartão${$("#cardBrand")?.value?` · ${$("#cardBrand").value}`:""}`:selectedPayment;
   const cardLabel=cardPaid>0?`Cartão · ${$("#cardBrand")?.value||paymentDetails.brand} · ${$("#cardType")?.value||paymentDetails.type}${$("#cardInstallments")?.value>1?` · ${$("#cardInstallments").value}x`:""}`:paymentLabel;
-  const sale={id:uid("sale"),number:state.settings.nextSale++,date:nowIso(),status:"completed",payment:cashPaid>0&&cardPaid>0?`${paymentLabel} · ${$("#cardType")?.value||"Crédito"}`:cardLabel,paymentMethod:selectedPayment,paymentBrand:cardPaid>0?$("#cardBrand")?.value:null,paymentType:cardPaid>0?$("#cardType")?.value:null,installments:cardPaid>0?Number($("#cardInstallments")?.value||1):1,paymentBreakdown:{cash:cashPaid,card:cardPaid,term:termPaid},subtotal:totals.subtotal,discount:totals.discount,total:totals.total,cost:items.reduce((a,i)=>a+i.cost*i.qty,0),items,operator:"Marcos Silva"};
+  const sale={id:uid("sale"),number:state.settings.nextSale++,date:nowIso(),status:"completed",payment:cashPaid>0&&cardPaid>0?`${paymentLabel} · ${$("#cardType")?.value||"Crédito"}`:cardLabel,paymentMethod:selectedPayment,paymentBrand:cardPaid>0?$("#cardBrand")?.value:null,paymentType:cardPaid>0?$("#cardType")?.value:null,installments:cardPaid>0?Number($("#cardInstallments")?.value||1):1,paymentBreakdown:{cash:cashPaid,card:cardPaid,term:termPaid},subtotal:totals.subtotal,discount:totals.discount,total:totals.total,cost:items.reduce((a,i)=>a+i.cost*i.qty,0),items,operator:$("#checkoutSeller")?.selectedOptions[0]?.text||"Operador do Caixa",sellerId:$("#checkoutSeller")?.value||null,observation:$("#saleObservation")?.value||""};
   items.forEach(i=>{const p=state.products.find(x=>x.id===i.productId);p.stock-=i.qty;state.stockMovements.unshift({id:uid("mov"),date:sale.date,productId:p.id,type:"out",qty:-i.qty,reason:`Venda #${sale.number}`,operator:"Marcos Silva"})});
   state.sales.unshift(sale); state.cart=[]; $("#manualDiscount").value="0"; save(); closeModal(); renderAll(); toast(`Venda #${sale.number} concluída com sucesso.`);
 }
@@ -496,7 +521,7 @@ function showProductForm(id){
   openModal(`<form id="productForm"><div class="modal-head"><div><h2>${p?"Editar":"Novo"} produto</h2><p>Informações comerciais e de estoque</p></div><button type="button" class="modal-close">×</button></div><div class="modal-body"><div class="form-grid">
     <div class="field full"><label>NOME DO PRODUTO</label><input name="name" required value="${esc(p?.name||"")}" placeholder="Ex.: Galão Água 20L"></div>
     <div class="field"><label>CÓDIGO / EAN</label><input name="code" required value="${esc(p?.code||"")}"></div><div class="field"><label>CATEGORIA</label><select name="categoryId" required>${state.categories.map(c=>`<option value="${c.id}" ${p?.categoryId===c.id?"selected":""}>${esc(c.name)}</option>`)}</select></div>
-    <div class="field"><label>FORNECEDOR</label><select name="supplierId"><option value="">Nenhum</option>${state.suppliers.map(s=>`<option value="${s.id}" ${p?.supplierId===s.id?"selected":""}>${esc(s.name)}</option>`)}</select></div><div class="field"><label>ÍCONE DE RESERVA</label><input name="emoji" maxlength="4" value="${esc(p?.emoji||"📦")}"><span class="form-hint">Usado quando não houver foto.</span></div>
+    <div class="field"><label>FORNECEDOR</label><select name="supplierId"><option value="">Nenhum</option>${state.suppliers.map(s=>`<option value="${s.id}" ${p?.supplierId===s.id?"selected":""}>${esc(s.name)}</option>`)}</select></div><div class="field"><label>ÍCONE DO PRODUTO</label><select name="icon"><option value="water" ${productIconKey(p||{})==="water"?"selected":""}>Água</option><option value="bottle" ${productIconKey(p||{})==="bottle"?"selected":""}>Garrafa</option><option value="drink" ${productIconKey(p||{})==="drink"?"selected":""}>Bebida</option><option value="juice" ${productIconKey(p||{})==="juice"?"selected":""}>Suco</option><option value="pump" ${productIconKey(p||{})==="pump"?"selected":""}>Bomba</option><option value="support" ${productIconKey(p||{})==="support"?"selected":""}>Suporte</option><option value="package" ${productIconKey(p||{})==="package"?"selected":""}>Produto</option></select><span class="form-hint">Ícone SVG usado quando não houver foto.</span></div>
     <div class="field full"><label>FOTO DO PRODUTO</label><input id="productImage" name="image" type="file" accept="image/png,image/jpeg,image/webp"><div id="imagePreview" class="upload-preview ${uploadedImage?"has-image":""}">${uploadedImage?`<img src="${esc(uploadedImage)}" alt="Prévia do produto">`:`<span>Escolha uma imagem para identificar este produto no caixa</span>`}</div><span class="form-hint">PNG, JPG ou WEBP. A imagem aparece nos cards de venda e tabelas.</span></div>
     <div class="field"><label>CUSTO DO FORNECEDOR</label><input name="cost" type="number" min="0" step="0.01" required value="${p?.cost??0}"></div><div class="field"><label>PREÇO DE VENDA</label><input name="price" type="number" min="0" step="0.01" required value="${p?.price??0}"></div>
     <div class="field"><label>ESTOQUE ATUAL</label><input name="stock" type="number" min="0" step="1" required value="${p?.stock??0}" ${p?"readonly":""}></div><div class="field"><label>ESTOQUE MÍNIMO</label><input name="minStock" type="number" min="0" step="1" required value="${p?.minStock??5}"></div>
@@ -523,6 +548,22 @@ function renderStock(){
 }
 function kpi(icon,color,label,value){return `<div class="kpi-card"><div class="kpi-icon ${color}">${icons[icon]}</div><div><span>${label}</span><strong>${value}</strong></div></div>`}
 
+const sellerSales=(sellerId,period="all")=>state.sales.filter(s=>s.status==="completed"&&(s.sellerId===sellerId||(!s.sellerId&&s.operator===state.sellers.find(x=>x.id===sellerId)?.name))&&inPeriod(s.date,period));
+function renderSettings(){
+  const body=$("#sellerTableBody"),defaultSelect=$("#settingDefaultSeller"); if(!body||!defaultSelect)return;
+  const activeSellers=state.sellers.filter(s=>s.active!==false);
+  defaultSelect.innerHTML=activeSellers.map(s=>"<option value=\""+esc(s.id)+"\">"+esc(s.name)+"</option>").join(""); defaultSelect.value=state.settings.defaultSellerId;
+  $("#settingStoreName").value=state.settings.storeName||""; $("#settingDefaultDiscount").value=Number(state.settings.defaultDiscount||0); $("#settingAutoFocus").checked=state.settings.autoFocus!==false; $("#settingConfirmSale").checked=state.settings.confirmSale===true;
+  body.innerHTML=state.sellers.map(s=>{const sales=sellerSales(s.id,"all"),revenue=sales.reduce((sum,sale)=>sum+sale.total,0);return "<tr><td><div class=\"seller-name\"><span class=\"avatar\">"+esc(s.name.split(/\s+/).map(n=>n[0]).slice(0,2).join("").toUpperCase())+"</span><strong>"+esc(s.name)+"</strong></div></td><td>"+esc(s.phone||"—")+"</td><td>"+sales.length+"</td><td><b>"+money.format(revenue)+"</b></td><td><span class=\"status "+(s.active===false?"cancelled":"ok")+"\">"+(s.active===false?"Inativo":"Ativo")+"</span></td><td><button class=\"action-btn\" data-edit-seller=\""+s.id+"\">Editar</button></td></tr>";}).join("")||"<tr><td colspan=\"6\" class=\"muted\">Cadastre o primeiro vendedor.</td></tr>";
+  const period=$("#sellerRankingPeriod")?.value||"all",ranking=state.sellers.map(s=>({seller:s,sales:sellerSales(s.id,period)})).map(x=>({...x,revenue:x.sales.reduce((sum,s)=>sum+s.total,0)})).filter(x=>x.sales.length).sort((a,b)=>b.revenue-a.revenue);
+  $("#sellerRanking").innerHTML=ranking.map((x,i)=>"<div class=\"seller-rank-row\"><span class=\"rank-number\">"+(i+1)+"</span><div class=\"seller-rank-main\"><strong>"+esc(x.seller.name)+"</strong><small>"+x.sales.length+" venda"+(x.sales.length===1?"":"s")+" no período</small></div><b>"+money.format(x.revenue)+"</b></div>").join("")||"<div class=\"empty-state\"><p>Nenhuma venda registrada neste período.</p></div>";
+}
+function showSellerForm(id){
+  const seller=id?state.sellers.find(s=>s.id===id):null;
+  openModal("<form id=\"sellerForm\"><div class=\"modal-head\"><div><h2>"+(seller?"Editar":"Novo")+" vendedor</h2><p>Defina quem poderá ser associado às vendas.</p></div><button type=\"button\" class=\"modal-close\">×</button></div><div class=\"modal-body\"><div class=\"form-grid\"><div class=\"field full\"><label>NOME DO VENDEDOR</label><input name=\"name\" required value=\""+esc(seller?.name||"")+"\" placeholder=\"Ex.: Ana Souza\"></div><div class=\"field full\"><label>TELEFONE (OPCIONAL)</label><input name=\"phone\" value=\""+esc(seller?.phone||"")+"\" placeholder=\"(00) 00000-0000\"></div><label class=\"setting-toggle full\"><input name=\"active\" type=\"checkbox\" "+(seller?.active!==false?"checked":"")+"><span><strong>Vendedor ativo</strong><small>Vendedores inativos não aparecem na finalização.</small></span></label></div></div><div class=\"modal-footer\"><button type=\"button\" class=\"btn secondary modal-close-btn\">Cancelar</button><button class=\"btn primary\">Salvar vendedor</button></div></form>");
+  $("#sellerForm").onsubmit=e=>{e.preventDefault();const data=Object.fromEntries(new FormData(e.target));data.active=e.target.active.checked;if(seller)Object.assign(seller,{name:data.name.trim(),phone:data.phone.trim(),active:data.active});else state.sellers.push({id:uid("seller"),name:data.name.trim(),phone:data.phone.trim(),active:data.active});if(!state.sellers.some(s=>s.id===state.settings.defaultSellerId&&s.active!==false))state.settings.defaultSellerId=state.sellers.find(s=>s.active!==false)?.id||state.sellers[0].id;save();closeModal();renderAll();toast("Vendedor salvo.");};
+}
+function saveSettings(){state.settings.storeName=$("#settingStoreName").value.trim()||"ÁguaPro Distribuidora";state.settings.defaultSellerId=$("#settingDefaultSeller").value||state.sellers[0]?.id;state.settings.defaultDiscount=Math.max(0,Number($("#settingDefaultDiscount").value)||0);state.settings.autoFocus=$("#settingAutoFocus").checked;state.settings.confirmSale=$("#settingConfirmSale").checked;save();toast("Configurações atualizadas.");}
 function showStockForm(productId=""){
   openModal(`<form id="stockForm"><div class="modal-head"><div><h2>Nova movimentação</h2><p>Registre entradas, saídas ou ajustes</p></div><button type="button" class="modal-close">×</button></div><div class="modal-body"><div class="form-grid"><div class="field full"><label>PRODUTO</label><select name="productId" required>${state.products.map(p=>`<option value="${p.id}" ${p.id===productId?"selected":""}>${esc(p.name)} · saldo ${p.stock}</option>`)}</select></div><div class="field"><label>TIPO</label><select name="type"><option value="in">Entrada</option><option value="out">Saída</option><option value="adjust">Ajuste de saldo</option></select></div><div class="field"><label>QUANTIDADE</label><input name="qty" type="number" min="0" step="1" required value="1"></div><div class="field full"><label>MOTIVO</label><input name="reason" required placeholder="Ex.: Compra do fornecedor, avaria, inventário"></div></div></div><div class="modal-footer"><button type="button" class="btn secondary modal-close-btn">Cancelar</button><button class="btn primary">Registrar movimentação</button></div></form>`);
   $("#stockForm").onsubmit=e=>{e.preventDefault();const data=Object.fromEntries(new FormData(e.target)),p=state.products.find(x=>x.id===data.productId),qty=Number(data.qty);let delta=data.type==="in"?qty:data.type==="out"?-qty:qty-p.stock;if(p.stock+delta<0){toast("A saída é maior que o saldo disponível.","error");return}p.stock+=delta;state.stockMovements.unshift({id:uid("mov"),date:nowIso(),productId:p.id,type:data.type,qty:delta,reason:data.reason,operator:"Marcos Silva"});save();closeModal();renderAll();toast("Movimentação registrada.")};
@@ -915,6 +956,38 @@ function showPeriodDetailModal(bucket){
       </button>
     </div>
   </div>`, true);
+  const grossCard=$("#modal .card-gross"),netCard=$("#modal .card-net");
+  if(grossCard){grossCard.classList.add("period-kpi-clickable");grossCard.title="Clique para ver as formas de pagamento";grossCard.onclick=()=>showPeriodMetricPopup("payments",bucket);}
+  if(netCard){netCard.classList.add("period-kpi-clickable");netCard.title="Clique para ver as vendas realizadas";netCard.onclick=()=>showPeriodMetricPopup("sales",bucket);}
+}
+
+function showPeriodMetricPopup(type,bucket){
+  const valid=bucket.sales||[],allSales=bucket.allSales||[];
+  if(type==="payments"){
+    const payments={Dinheiro:0,Cartão:0,Pix:0,Prazo:0};
+    valid.forEach(s=>{
+      if(s.paymentBreakdown){payments.Dinheiro+=(s.paymentBreakdown.cash||0);payments.Cartão+=(s.paymentBreakdown.card||0);payments.Prazo+=(s.paymentBreakdown.term||0);}
+      else {const key=s.payment?.includes("Dinheiro")?"Dinheiro":s.payment?.includes("Cart")?"Cartão":s.payment?.includes("Pix")?"Pix":"Prazo";payments[key]=(payments[key]||0)+s.total;}
+    });
+    const total=valid.reduce((a,s)=>a+s.total,0);
+    const rows=Object.entries(payments).map(([name,value])=>"<div class=\"period-popup-pay-row\"><span>"+esc(name)+"</span><strong>"+money.format(value)+"</strong><div class=\"period-popup-track\"><i style=\"width:"+(total>0?(value/total)*100:0)+"%\"></i></div></div>").join("");
+    openModal("<div class=\"period-popup\"><div class=\"period-popup-head\"><div><span class=\"period-popup-kicker\">Detalhamento de pagamentos</span><h2>Formas de pagamento</h2><p>"+esc(bucket.fullTitle)+"</p></div><button class=\"modal-close\">×</button></div><div class=\"period-popup-body\">"+rows+"</div><div class=\"period-popup-foot\"><button class=\"btn secondary\" id=\"returnPeriodBtn\">Voltar ao detalhamento</button></div></div>",true);
+  } else {
+    const sellerOptions="<option value=\"all\">Todos os vendedores</option>"+state.sellers.map(s=>"<option value=\""+esc(s.id)+"\">"+esc(s.name)+"</option>").join("");
+    openModal("<div class=\"period-popup period-sales-popup\"><div class=\"period-popup-head\"><div><span class=\"period-popup-kicker\">Vendas realizadas no intervalo</span><h2>Faturamento líquido</h2><p>"+esc(bucket.fullTitle)+"</p></div><button class=\"modal-close\">×</button></div><div class=\"period-popup-body\"><div class=\"period-popup-filter\"><label for=\"periodSellerFilter\">Filtrar por vendedor</label><select id=\"periodSellerFilter\">"+sellerOptions+"</select></div><div class=\"period-popup-metrics\" id=\"periodPopupMetrics\"></div><div class=\"period-popup-table\"><table><thead><tr><th>Venda</th><th>Horário</th><th>Vendedor</th><th>Itens</th><th>Pagamento</th><th>Valor</th><th>Status</th></tr></thead><tbody id=\"periodPopupSalesBody\"></tbody></table></div></div><div class=\"period-popup-foot\"><button class=\"btn secondary\" id=\"returnPeriodBtn\">Voltar ao detalhamento</button></div></div>",true);
+    const sellerLabel=s=>state.sellers.find(x=>x.id===s.sellerId)?.name||s.operator||"Sem vendedor";
+    const renderSalesPopup=()=>{
+      const sellerId=$("#periodSellerFilter").value;
+      const filtered=allSales.filter(s=>sellerId==="all"||s.sellerId===sellerId||(!s.sellerId&&sellerLabel(s)===state.sellers.find(x=>x.id===sellerId)?.name));
+      const completed=filtered.filter(s=>s.status==="completed");
+      const invested=completed.reduce((a,s)=>a+(s.cost||0),0),gross=completed.reduce((a,s)=>a+(s.subtotal||s.total),0),netValue=completed.reduce((a,s)=>a+s.total,0);
+      $("#periodPopupMetrics").innerHTML="<div class=\"period-popup-metric invested\"><span>Valor investido</span><strong>"+money.format(invested)+"</strong><small>Custo dos produtos</small></div><div class=\"period-popup-metric gross\"><span>Valor bruto recebido</span><strong>"+money.format(gross)+"</strong><small>Antes dos descontos</small></div><div class=\"period-popup-metric net\"><span>Valor líquido</span><strong>"+money.format(netValue)+"</strong><small>Após descontos</small></div>";
+      $("#periodPopupSalesBody").innerHTML=filtered.map(s=>"<tr><td><b>#"+s.number+"</b></td><td>"+localDate(s.date)+"</td><td>"+esc(sellerLabel(s))+"</td><td>"+s.items.reduce((a,i)=>a+i.qty,0)+" itens</td><td><span class=\"pay-pill-tag\">"+esc(s.payment)+"</span></td><td><strong class=\"text-blue\">"+money.format(s.total)+"</strong></td><td><span class=\"status "+s.status+"\">"+(s.status==="completed"?"Concluída":"Cancelada")+"</span></td></tr>").join("")||"<tr><td colspan=\"7\" class=\"muted\">Nenhuma venda para este vendedor no período.</td></tr>";
+    };
+    $("#periodSellerFilter").onchange=renderSalesPopup;
+    renderSalesPopup();
+  }
+  $("#returnPeriodBtn").onclick=()=>showPeriodDetailModal(bucket);
 }
 
 function exportReport(){
@@ -931,6 +1004,7 @@ document.addEventListener("click",e=>{
   const editP=e.target.closest("[data-edit-product]");if(editP)showProductForm(editP.dataset.editProduct);
   const editC=e.target.closest("[data-edit-category]");if(editC)showSimpleForm("category",editC.dataset.editCategory);
   const editS=e.target.closest("[data-edit-supplier]");if(editS)showSimpleForm("supplier",editS.dataset.editSupplier);
+  const editSeller=e.target.closest("[data-edit-seller]");if(editSeller)showSellerForm(editSeller.dataset.editSeller);
   const stock=e.target.closest("[data-stock-product]");if(stock)showStockForm(stock.dataset.stockProduct);
   const cancel=e.target.closest("[data-cancel-sale]");if(cancel)showCancelSale(cancel.dataset.cancelSale);
   const view=e.target.closest("[data-view-cancel]");if(view)viewCancellation(view.dataset.viewCancel);
@@ -943,6 +1017,7 @@ $("#saleSearch").oninput=renderSale; $("#productSearch").oninput=renderProducts;
 $("#manualDiscount").oninput=renderCart; $("#checkoutBtn").onclick=showCheckout; $("#clearCart").onclick=()=>{state.cart=[];renderCart()};
 $("#scanBtn").onclick=()=>{$("#saleSearch").focus();toast("Digite ou leia o código de barras no campo de busca.","info")};
 $("#stockEntryBtn").onclick=()=>showStockForm(); $("#exportCsv").onclick=exportReport;
+$("#saveSettingsBtn").onclick=saveSettings; $("#addSellerBtn").onclick=()=>showSellerForm(); $("#sellerRankingPeriod").onchange=renderSettings;
 $("#addProductBtn").onclick=()=>productTab==="products"?showProductForm():showSimpleForm(productTab==="categories"?"category":"supplier");
 $$('[data-tab]').forEach(b=>b.onclick=()=>{productTab=b.dataset.tab;$$('[data-tab]').forEach(x=>x.classList.toggle("active",x===b));renderProducts()});
 $$('[data-period]').forEach(b=>b.onclick=()=>{reportPeriod=b.dataset.period;$$('[data-period]').forEach(x=>x.classList.toggle("active",x===b));renderReports()});

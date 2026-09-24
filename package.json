@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "node backend/server.mjs",
+    "dev": "node backend/server.mjs",
     "check": "node --check js/app.js && node --check backend/server.mjs"
   }
 }
